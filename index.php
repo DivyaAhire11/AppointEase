@@ -11,9 +11,9 @@
 <body>
     <div class="page1">
         <?php include 'includes/navbar.php'; ?>
+        <?php include 'includes/homePage1.php'; ?>
     </div>
 
-    <?php include 'includes/homePage1.php'; ?>
     <?php include 'includes/homePage2.php'; ?>
     <?php include 'includes/footer.php'; ?>
 </body>
