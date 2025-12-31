@@ -1,0 +1,68 @@
+
+/* HERO SECTION */
+.hero {
+     height: calc(100vh - 70px);   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px;
+
+    background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),url("../images/friendly-nurse.webp")center/cover no-repeat;
+   
+    position: relative;
+    color: #fff;
+
+}
+
+/* Text area */
+.hero-content {
+    max-width: 60%;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+   color: #ffffff;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #6fffe9;
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 1.05rem;
+    color: #eaeaea;
+    line-height: 1.6;
+}
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 300px;
+        margin-top: 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+

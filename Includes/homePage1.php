@@ -13,9 +13,4 @@
             <a href="Pages/doctors.php" class="btn-secondary">View Doctors</a>
         </div>
     </div>
-
-    <div class="hero-image">
-        <img src="images/doctor.jpg" alt="Doctor Illustration">
-
-    </div>
 </section>
