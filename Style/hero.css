@@ -2,7 +2,7 @@
 
 .hero {
     /* height: calc(100vh - 70px);    */
-    height:90vh;
+    height:95vh;
     display: flex;
     align-items: center;
     /* justify-content: center; */

@@ -4,6 +4,7 @@
 @import "Style/buttons.css";
 @import "Style/hero.css";
 @import "Style/responsive.css";
+@import "Style/page2.css";
 
 * {
     margin: 0;

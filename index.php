@@ -11,12 +11,17 @@
 <body>
     <div class="page1">
         <?php include 'includes/navbar.php'; ?>
-       
-         <?php include 'includes/homePage1.php'; ?>
+
+        <?php include 'includes/homePage1.php'; ?>
     </div>
 
-    <?php include 'includes/homePage2.php'; ?>
+    <div class="homePage2">
+        <?php include 'includes/homePage2.php'; ?>
+    </div>
+
     <?php include 'includes/footer.php'; ?>
+    
+    <script src="./script.js"></script>
 </body>
 
 </html>
