@@ -6,7 +6,7 @@
 @import "Style/responsive.css";
 @import "Style/page2.css";
 @import "Style/footer.css";
-@import "Style/bookAppoint.css";
+/* @import "Style/bookAppoint.css"; */
 
 
 * {
@@ -26,4 +26,3 @@ body {
     width: 100%;
     background-color: #ffffff;
 }
-
