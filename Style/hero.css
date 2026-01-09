@@ -1,7 +1,6 @@
 /* HERO SECTION */
 
 .hero {
-    /* height: calc(100vh - 70px);    */
     height:95vh;
     display: flex;
     align-items: center;
@@ -12,7 +11,7 @@
         rgba(0, 0, 0, 0.35),
         rgba(0, 0, 0, 0.35)
     ),
-    url("../images/doctor.jpg")top center/cover no-repeat;
+    url("../images/doctor11.jpg")top center/cover no-repeat;
 
 
     position: relative;
