@@ -1,26 +1,43 @@
-<div class="book-appointment">
-<h2>Book Appointment</h2>
-<form action="AppointBook.php" method="post">
-    <label>Patient Name </label>
-    <input type="text" name="patient_name" required>
+<!DOCTYPE html>
+<html>
 
-    <label>Email </label>
-    <input type="email" name="email" required>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
 
-    <label>Doctor </label>
-    <select name="doctor" required>
-        <option value="">Select Doctor</option>
-        <option value="John">Dr. John</option>
-        <option value="Smith">Dr. Smith</option>
-    </select>
+<body>
+    <div class="book-appointment">
+        <h2>Book Appointment</h2>
+        <form action="AppointBook.php" method="post">
+            <label>Patient Name </label>
+            <input type="text" name="patient_name" required>
 
-    <label>Date</label>
-    <input type="date" name="date" required>
+            <label>Email </label>
+            <input type="email" name="email" required>
 
-    <label>Time</label>
-    <input type="time" name="time" required>
+            <label>Doctor </label>
+            <select name="doctor" required>
+                <option value="">Select Doctor</option>
+                <option value="John">Dr. John</option>
+                <option value="Smith">Dr. Smith</option>
+            </select>
 
-    <button type="submit" name="submit">Book Appointment</button>
+            <label>Date</label>
+            <input type="date" name="date" required>
 
-</form>
-</div>
+            <label>Time</label>
+            <input type="time" name="time" required>
+
+            <button type="submit" name="submit">Book Appointment</button>
+
+        </form>
+        <div>
+            <img src="../images/MedicineTechnology.jpg" alt="Medical Technology" height="500px">
+        </div>
+    </div>
+</body>
+
+</html>
