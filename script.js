@@ -1,9 +1,8 @@
-<script>
-    const menuLine = document.getElementByClass('lines');
-    const menu = document.getElementByClass('menu')
+ console.log("Script is loaded!");
 
-   menuLine.addEventListener('click', () = {
-        menu.classList.toggle('active')
-   });
-</script>
+     const menuIcon = document.getElementById('menuIcon');
+     const menu = document.getElementById('menu');
 
+     menuIcon.addEventListener('click', () => {
+          menu.classList.toggle('active');
+     });

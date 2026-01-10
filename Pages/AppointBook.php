@@ -8,7 +8,7 @@
    
 
     if($patient && $email && $doctor && $date  && $time){
-        echo "Appointment booked successfully!";
+        echo "<h1>Appointment booked successfully!</h1>";
     }else{
          echo "Please fill all fields.";
     }
