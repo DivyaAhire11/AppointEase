@@ -1,19 +1,7 @@
 <?php
-   if(isset($_POST['submit'])){
-    $patient = $_POST['patient_name'];
-    $email = $_POST['email'];
-    $doctor = $_POST['doctor'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
-   
 
-    if($patient && $email && $doctor && $date  && $time){
-        echo "<h1>Appointment booked successfully!</h1>";
-    }else{
-         echo "Please fill all fields.";
-    }
-   }
-?>
+  
+?> 
 <!-- 
 Database-> 
 CREATE TABLE appointments (

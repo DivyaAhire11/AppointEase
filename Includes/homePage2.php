@@ -1,6 +1,6 @@
 <section class="page2">
     <div class="experts">
-        <h2>our experts</h2>
+        <h2>Our Specialists</h2>
     </div>
 
     <div class="info-block">
