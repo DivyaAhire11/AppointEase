@@ -8,4 +8,23 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE doctors (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    specialist VARCHAR(100),
+    experience VARCHAR(50),
+    description TEXT,
+    image VARCHAR(255)
+);
+
+INSERT INTO doctors (name, specialist, experience, description, image)
+VALUES
+('Dr. Rahul Sharma', 'Cardiologist', '10 Years',
+ 'Expert in heart diseases, angioplasty, and cardiac surgery.',
+ 'doctor1.jpg'),
+
+('Dr. Anjali Mehta', 'Dermatologist', '8 Years',
+ 'Specialist in skin care, acne treatment, and cosmetic dermatology.',
+ 'doctor2.jpg');
+
 
