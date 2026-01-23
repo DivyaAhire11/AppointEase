@@ -1,6 +1,6 @@
  .book-appointment {
      max-width: 55vw;
-     margin: 30px auto;
+     margin: 20px auto;
      padding: 25px;
      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
      border-radius: 10px;
@@ -29,7 +29,7 @@
  .book-img img {
      /* width: 100%; */
      width: 300px;
-     height: 70vh;
+     height: 80vh;
      border-radius: 10px;
      object-fit: cover;
 
@@ -80,7 +80,6 @@
      padding: 12px;
      /* background: #2c7be5; */
      background-color: #133c39;
-     ;
      color: white;
      border: none;
      border-radius: 6px;
@@ -92,7 +91,7 @@
  .book-appointment button:hover {
      /* background: #1a5dc9; */
      background-color: #115d58;
-     ;
+     
  }
 
  /* Responsive  */

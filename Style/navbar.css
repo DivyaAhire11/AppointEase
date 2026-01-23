@@ -65,7 +65,8 @@
 }
 
 .btn-primary:hover {
-    background-color: #12695f;
+    /* background-color: #12695f; */
+    background-color: #115d58;
 }
 
 .lines {

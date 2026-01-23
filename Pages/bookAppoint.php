@@ -38,6 +38,9 @@
                 <label>Time</label>
                 <input type="time" name="time" required>
 
+                <label>Whats Problem ?</label>
+                <textarea name="problem" id="problem" rows="4"></textarea>
+
                 <button type="submit" name="submit">Book Appointment</button>
 
             </form>
