@@ -28,3 +28,13 @@ VALUES
  'doctor2.jpg');
 
 
+CREATE TABLE appointments (
+    id SERIAL PRIMARY KEY,
+    patient_id INT,
+    doctor_id INT,
+    appointment_date DATE,
+    appointment_time TIME,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT unique_booking UNIQUE (doctor_id, appointment_date, appointment_time)
+);
