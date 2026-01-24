@@ -1,15 +1,109 @@
-@media (max-width: 900px) {
+/* Mobile Navigation */
+@media screen and (max-width: 900px) {
     .navbar {
         padding: 0 20px;
     }
 
+    .logo {
+        font-size: 1.3rem;
+    }
+
     .menu {
-        gap: 12px;
+        gap: 15px;
     }
 
     .menu li a {
         font-size: 0.85rem;
-        padding: 6px 10px;
+        padding: 6px 10px !important;
+    }
 
+    .lines {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu li a {
+        font-size: 0.8rem;
+        padding: 4px 8px !important;
+    }
+
+    .nav-btn {
+        padding: 10px 18px !important;
+        font-size: 0.85rem;
+    }
+
+    .lines {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Hero Section Responsiveness */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Page Content Responsiveness */
+@media (max-width: 768px) {
+    .features-grid {
+        gap: 15px;
+    }
+
+    .feature-card {
+        padding: 25px 15px;
+    }
+
+    .feature-icon {
+        font-size: 2.2rem;
+    }
+
+    .cta-section {
+        padding: 50px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content p {
+        font-size: 0.95rem;
+    }
+
+    .cta-btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
     }
 }
