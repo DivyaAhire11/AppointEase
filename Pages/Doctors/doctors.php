@@ -1,16 +1,19 @@
 <?php
-include "../../db.php";
+include "../../config/db.php";
 $result = pg_query($conn, "SELECT * FROM doctors");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Doctors</title>
-<link rel="stylesheet" href="../../Style/doctors.css">
+<link rel="stylesheet" href="../../Style/pages/doctors.css">
 </head>
 
 <body>
+<?php include "../../Includes/navbar.php"; ?>
 
 <div class="header">
     <h1>Our Medical Specialists</h1>
@@ -33,5 +36,6 @@ $result = pg_query($conn, "SELECT * FROM doctors");
 <?php } ?>
 </div>
 
+<?php include "../../Includes/footer.php"; ?>
 </body>
 </html>

@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-include "./config/db.php";
+include "../../config/db.php";
 
 if (!isset($_GET['id'])) {
     header("Location: doctors.php");
@@ -28,11 +28,14 @@ if (!$doctor) {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Profile</title>
-    <link rel="stylesheet" href="../../Style/doctor_details.css">
+    <link rel="stylesheet" href="../../Style/pages/doctor_details.css">
 </head>
 
 <body>
+    <?php include "../../Includes/navbar.php"; ?>
 
 <div class="profile">
     <img src="../../images/<?php echo htmlspecialchars($doctor['image']); ?>">
@@ -42,7 +45,7 @@ if (!$doctor) {
         <p><strong>Experience:</strong> <?php echo htmlspecialchars($doctor['experience']); ?></p>
         <p><?php echo htmlspecialchars($doctor['description']); ?></p>
 
-        <a class="btn" href="../../book_appointment.php?doctor_id=<?php echo $doctor['id']; ?>">
+        <a class="btn" href="../book_appointment.php?doctor_id=<?php echo $doctor['id']; ?>">
             Book Appointment
         </a>
 
@@ -50,5 +53,6 @@ if (!$doctor) {
     </div>
 </div>
 
+<?php include "../../Includes/footer.php"; ?>
 </body>
 </html>

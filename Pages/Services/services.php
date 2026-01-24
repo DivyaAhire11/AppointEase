@@ -1,65 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Medical Services</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #e0f7fa;
-}
-
-.header {
-    background: linear-gradient(135deg, #006d6f, #009688);
-    color: white;
-    text-align: center;
-    padding: 40px;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 50px;
-}
-
-.card {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: 0.3s;
-    text-decoration: none;
-    color: black;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.icon {
-    width: 80px;
-    height: 80px;
-    background: #00bcd4;
-    color: white;
-    border-radius: 50%;
-    font-size: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-h3 {
-    color: #006d6f;
-    margin-top: 15px;
-}
-</style>
+<link rel="stylesheet" href="../../Style/pages/services.css">
 </head>
 
 <body>
+<?php include "../../Includes/navbar.php"; ?>
 
 <div class="header">
     <h1>Our Medical Services</h1>
@@ -94,5 +43,6 @@ h3 {
 
 </div>
 
+<?php include "../../Includes/footer.php"; ?>
 </body>
 </html>
