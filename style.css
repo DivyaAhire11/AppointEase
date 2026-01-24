@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@import "Style/navbar.css";
-@import "Style/buttons.css";
+@import "Style/base/navbar.css";
+@import "Style/base/footer.css";
+@import "Style/base/responsive.css";
 @import "Style/hero.css";
-@import "Style/responsive.css";
-@import "Style/page2.css";
-@import "Style/footer.css";
-@import "Style/bookAppoint.css";
-
+@import "Style/pages/page2.css";
 
 * {
     margin: 0;
@@ -15,14 +12,186 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f6f8;
+    background-color: #f8f9fa;
     color: #333;
+    line-height: 1.6;
 }
 
 .page1 {
     min-height: 100vh;
     width: 100%;
     background-color: #ffffff;
+}
+
+.homePage2 {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #006d77;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.features-header p {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #006d77;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-top-color: #00bcd4;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    color: #006d77;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(135deg, #006d77 0%, #009688 100%);
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: white;
+    color: #006d77;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    background: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .features-section {
+        padding: 60px 30px;
+    }
+
+    .features-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 50px 20px;
+    }
+
+    .features-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-header p {
+        font-size: 1rem;
+    }
+
+    .features-grid {
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
 }
