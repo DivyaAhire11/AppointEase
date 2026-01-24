@@ -1,15 +1,18 @@
 .hero {
-    height: 100vh;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 80px;
     background: linear-gradient(
-        rgba(0, 109, 119, 0.6),
-        rgba(0, 109, 119, 0.6)
+        90deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0) 100%
     ),
-    url("../images/doctor11.jpg") center/cover no-repeat;
-    background-attachment: fixed;
+    url("../images/doctor11.jpg") right center/cover no-repeat;
+    background-attachment: scroll;
     position: relative;
     overflow: hidden;
 }
@@ -19,22 +22,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, rgba(0,109,119,0.7) 0%, rgba(0,150,136,0.5) 100%);
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,109,119,0.5) 0%, transparent 100%);
     z-index: 0;
+    pointer-events: none;
 }
 
 /* Animated Background Elements */
 .hero-overlay {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(111, 255, 233, 0.1) 0%, transparent 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(111, 255, 233, 0.08) 0%, transparent 70%);
     border-radius: 50%;
-    bottom: -100px;
-    right: -100px;
-    animation: float 6s ease-in-out infinite;
+    bottom: -150px;
+    right: -150px;
+    animation: float 8s ease-in-out infinite;
     z-index: 0;
 }
 
@@ -50,10 +54,14 @@
 /* Text area */
 .hero-content {
     position: relative;
-    max-width: 60%;
+    max-width: 55%;
     text-align: left;
     z-index: 1;
     animation: slideInLeft 0.8s ease-out;
+    background: rgba(0, 109, 119, 0.3);
+    padding: 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
 
 @keyframes slideInLeft {
@@ -68,11 +76,12 @@
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 700;
     color: #ffffff;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content h1 .highlight {
@@ -85,11 +94,12 @@
 }
 
 .hero-content p {
-    margin: 25px 0 35px 0;
-    font-size: 1.15rem;
+    margin: 25px 0rem;
     font-weight: 500;
-    color: #e0f7fa;
+    color: #ffffff;
     line-height: 1.8;
+    max-width: 500px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     max-width: 500px;
 }
 
@@ -146,14 +156,16 @@
 /* Responsive */
 @media (max-width: 1200px) {
     .hero {
-        padding: 0 60px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.8rem;
+        background-position: right center;
     }
 
     .hero-content {
+        max-width: 60%;
+        padding: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem
         max-width: 70%;
     }
 }
@@ -161,12 +173,24 @@
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 80px 40px;
-        min-height: auto;
+        justify-c60px 40px;
+        margin-top: 70px;
+        height: auto;
+        min-height: calc(100vh - 70px);
+        background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.5) 100%), 
+                    url("../images/doctor11.jpg") center/cover no-repeat;
     }
 
+    .hero::before {
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0,109,119,0.4) 0%, transparent 100%);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 35px;
+        background: rgba(0, 109, 119, 0.4);
+        text-align: center
     .hero-content {
         max-width: 100%;
         animation: slideInUp 0.8s ease-out;
@@ -185,22 +209,15 @@
 
     .hero-content h1 {
         font-size: 2.2rem;
+    }50px 20px;
+        height: auto;
+        min-height: calc(100vh - 60px);
+        margin-top: 60px;
     }
 
-    .hero-content p {
-        font-size: 1rem;
-        margin: 20px auto 30px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero {
-        padding: 60px 20px;
-        background-attachment: scroll;
+    .hero-content {
+        padding: 25px;
+        max-width: 100%;
     }
 
     .hero-content h1 {
@@ -211,6 +228,23 @@
         font-size: 0.95rem;
     }
 
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .hero-overlay {
+        width: 250px;
+        height: 250px;
+        bottom: -80px;
+        right: -8
     .hero-buttons {
         flex-direction: column;
         gap: 15px;
