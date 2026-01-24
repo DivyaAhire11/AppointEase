@@ -41,6 +41,14 @@
     gap: 30px;
 }
 
+.menu li {
+    display: list-item;
+}
+
+.menu li a {
+    display: inline-block;
+}
+
 .nav-link {
     text-decoration: none;
     color: #ffffff;
@@ -103,6 +111,7 @@
 
 @media screen and (max-width: 768px) {
     .navbar {
+        height: 70px;
         padding: 0 15px;
     }
 
@@ -122,6 +131,7 @@
         overflow: hidden;
         transition: max-height 0.3s ease;
         padding: 0;
+        z-index: 999;
     }
 
     .menu.active {
@@ -142,8 +152,18 @@
         font-size: 0.9rem !important;
     }
 
+    .menu li a.nav-btn {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 10px 0 0 0;
+        padding: 15px 20px !important;
+    }
+
     .nav-link::after {
         display: none;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(111, 255, 233, 0.2) !important;
     }
 
     .lines {
