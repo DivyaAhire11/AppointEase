@@ -91,23 +91,27 @@
 
 .lines {
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 28px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+.lines.active {
+    transform: rotate(90deg);
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     .logo {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .menu {
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
         width: 100%;
@@ -117,31 +121,33 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+        padding: 0;
     }
 
     .menu.active {
-        max-height: 400px;
+        max-height: 500px;
+        padding: 20px 0;
     }
 
     .menu li {
         width: 100%;
         text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .menu li a {
         display: block;
-        padding: 15px !important;
+        padding: 15px 20px !important;
         border-radius: 0 !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem !important;
+    }
+
+    .nav-link::after {
+        display: none;
     }
 
     .lines {
         display: block;
-        filter: brightness(0) invert(1);
-    }
-
-    .lines.active {
-        transform: rotate(90deg);
     }
 }
 

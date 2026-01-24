@@ -77,28 +77,27 @@
     color: #ffffff;
     line-height: 1.1;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content h1 .highlight {
-    color: #6fffe3px 3px 8px rgba(0, 0, 0, 0.5), 1px 1px 2
+    color: #6fffe9;
     background: linear-gradient(135deg, #6fffe9, #00bcd4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
-    text-shadow: none;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .hero-content p {
-    margin: 25px 0rem;
+    margin: 25px 0 35px 0;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #ffffff;
     line-height: 1.8;
     max-width: 500px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6), 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* Buttons */
@@ -154,43 +153,41 @@
 /* Responsive */
 @media (max-width: 1200px) {
     .hero {
+        padding: 0 60px;
         background-position: right center;
     }
 
     .hero-content {
         max-width: 60%;
-        padding: 40px;
     }
 
     .hero-content h1 {
-        font-size: 3rem
-        max-width: 70%;
+        font-size: 3rem;
     }
 }
 
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
-        justify-c60px 40px;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 40px;
         margin-top: 70px;
         height: auto;
         min-height: calc(100vh - 70px);
-        background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.5) 100%), 
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
                     url("../images/doctor11.jpg") center/cover no-repeat;
     }
 
     .hero::before {
         width: 100%;
-        background: linear-gradient(180deg, rgba(0,109,119,0.4) 0%, transparent 100%);
+        background: linear-gradient(180deg, rgba(0, 109, 119, 0.4) 0%, transparent 100%);
     }
 
     .hero-content {
         max-width: 100%;
         padding: 35px;
-        background: rgba(0, 109, 119, 0.4);
-        text-align: center
-    .hero-content {
-        max-width: 100%;
+        text-align: center;
         animation: slideInUp 0.8s ease-out;
     }
 
@@ -207,7 +204,21 @@
 
     .hero-content h1 {
         font-size: 2.2rem;
-    }50px 20px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin: 20px auto 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 50px 20px;
         height: auto;
         min-height: calc(100vh - 60px);
         margin-top: 60px;
@@ -242,20 +253,6 @@
         width: 250px;
         height: 250px;
         bottom: -80px;
-        right: -8
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-overlay {
-        width: 300px;
-        height: 300px;
+        right: -80px;
     }
 }
