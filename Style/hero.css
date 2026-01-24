@@ -1,5 +1,6 @@
 .hero {
-    height: calc(100vh - 70px);
+    /* height: calc(100vh - 70px); */
+    height: 80vh;
     margin-top: 70px;
     display: flex;
     align-items: center;
@@ -34,7 +35,7 @@
     position: absolute;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(111, 255, 233, 0.08) 0%, transparent 70%);
+    /* background: radial-gradient(circle, rgba(111, 255, 233, 0.08) 0%, transparent 70%); */
     border-radius: 50%;
     bottom: -150px;
     right: -150px;
