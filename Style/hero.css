@@ -1,24 +1,26 @@
 .hero {
-    /* height: calc(100vh - 70px); */
-    height: 80vh;
+    height: 100vh;
     margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 80px;
-    background: linear-gradient(
+    /* background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0.15) 0%,
         rgba(0, 0, 0, 0.05) 40%,
         rgba(0, 0, 0, 0) 100%
     ),
-    url("../images/doctor11.jpg") right center/cover no-repeat;
+    url("../images/doctor11.jpg") right center/cover no-repeat; */
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
+        url("../images/doctor11.jpg") center/cover no-repeat;
     background-attachment: scroll;
     position: relative;
     overflow: hidden;
 }
 
-.hero::before {
+/* .hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -28,21 +30,22 @@
     background: linear-gradient(90deg, rgba(0,0,0,0.08) 0%, transparent 100%);
     z-index: 0;
     pointer-events: none;
-}
+} */
 
 /* Animated Background Elements */
 .hero-overlay {
     position: absolute;
     width: 500px;
     height: 500px;
-    /* background: radial-gradient(circle, rgba(111, 255, 233, 0.08) 0%, transparent 70%); */
+    background: radial-gradient(circle, rgba(111, 255, 233, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     bottom: -150px;
     right: -150px;
-    animation: float 8s ease-in-out infinite;
+    /* animation: float 8s ease-in-out infinite; */
     z-index: 0;
 }
 
+/* 
 @keyframes float {
     0%, 100% {
         transform: translateY(0px);
@@ -50,7 +53,7 @@
     50% {
         transform: translateY(-30px);
     }
-}
+} */
 
 /* Text area */
 .hero-content {
@@ -58,9 +61,10 @@
     max-width: 55%;
     text-align: left;
     z-index: 1;
-    animation: slideInLeft 0.8s ease-out;
+    /* animation: slideInLeft 0.8s ease-out; */
 }
 
+/*
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -71,24 +75,24 @@
         transform: translateX(0);
     }
 }
-
+*/
 .hero-content h1 {
     font-size: 3.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #ffffff;
     line-height: 1.1;
     margin-bottom: 20px;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3); */
 }
 
 .hero-content h1 .highlight {
     color: #6fffe9;
-    background: linear-gradient(135deg, #6fffe9, #00bcd4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    /* background: linear-gradient(135deg, #6fffe9, #00bcd4); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    /* background-clip: text; */
     display: inline-block;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    /* filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); */
 }
 
 .hero-content p {
@@ -98,7 +102,7 @@
     color: #ffffff;
     line-height: 1.8;
     max-width: 500px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6), 1px 1px 2px rgba(0, 0, 0, 0.4);
+    /* text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6), 1px 1px 2px rgba(0, 0, 0, 0.4); */
 }
 
 /* Buttons */
@@ -125,7 +129,7 @@
 
 .btn-primary:hover {
     background: linear-gradient(135deg, #009688, #00796b);
-    transform: translateY(-3px);
+    transform: translateY(-1px);
     box-shadow: 0 12px 30px rgba(0, 150, 136, 0.4);
 }
 
@@ -177,7 +181,7 @@
         height: auto;
         min-height: calc(100vh - 70px);
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
-                    url("../images/doctor11.jpg") center/cover no-repeat;
+            url("../images/doctor11.jpg") center/cover no-repeat;
     }
 
     .hero::before {
@@ -197,6 +201,7 @@
             opacity: 0;
             transform: translateY(30px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
