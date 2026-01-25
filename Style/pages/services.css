@@ -6,9 +6,12 @@
 
 body {
     margin: 0;
+    padding-top: 70px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #e0f7fa 0%, #b2dfdb 100%);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -38,6 +41,7 @@ body {
     padding: 50px 40px;
     max-width: 1400px;
     margin: 0 auto;
+    flex: 1;
 }
 
 .card {

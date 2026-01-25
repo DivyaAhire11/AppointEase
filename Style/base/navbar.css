@@ -98,7 +98,7 @@
 }
 
 .lines {
-    display: none;
+    display: none !important;
     width: 35px;
     height: 28px;
     cursor: pointer;
@@ -111,43 +111,43 @@
 
 @media screen and (max-width: 768px) {
     .navbar {
-        height: 70px;
-        padding: 0 15px;
+        height: auto;
+        padding: 10px 15px;
+        flex-wrap: wrap;
     }
 
     .logo {
         font-size: 1.2rem;
+        flex: 1;
     }
 
     .menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
         width: 100%;
-        background: linear-gradient(135deg, #006d77 0%, #00897b 100%);
-        flex-direction: column;
-        gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        padding: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        max-height: none;
+        overflow: visible;
+        position: static;
+        background: transparent;
+        padding: 10px 0 0 0;
         z-index: 999;
     }
 
     .menu.active {
-        max-height: 500px;
-        padding: 20px 0;
+        max-height: none;
+        padding: 10px 0 0 0;
     }
 
     .menu li {
-        width: 100%;
+        width: auto;
         text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: none;
     }
 
     .menu li a {
-        display: block;
-        padding: 15px 20px !important;
+        display: inline-block;
+        padding: 8px 12px !important;
         border-radius: 0 !important;
         font-size: 0.9rem !important;
     }
