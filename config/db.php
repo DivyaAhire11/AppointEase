@@ -1,11 +1,13 @@
 <?php
-$con = pg_connect("
+$conn = pg_connect("
  host=localhost
  port=5432
  dbname=hospital 
  user=postgres
  password=tybcs");
 
-if (!$con) {
+if (!$conn) {
    die("Database connection failed");
 }
+
+?>

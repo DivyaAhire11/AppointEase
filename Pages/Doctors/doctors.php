@@ -9,6 +9,9 @@ $result = pg_query($conn, "SELECT * FROM doctors");
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Doctors</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../../Style/base/navbar.css">
+<link rel="stylesheet" href="../../Style/base/footer.css">
 <link rel="stylesheet" href="../../Style/pages/doctors.css">
 </head>
 
