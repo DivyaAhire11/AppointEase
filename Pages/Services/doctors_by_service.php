@@ -13,11 +13,14 @@ $result = pg_query_params($conn, $query, array($specialist));
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php echo htmlspecialchars($specialist); ?> Doctors</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../../Style/base/navbar.css">
+<link rel="stylesheet" href="../../Style/base/footer.css">
 <link rel="stylesheet" href="../../Style/pages/doctors.css">
 </head>
 
 <body>
-<?php include "./Includes/navbar.php"; ?>
+<?php include "../../Includes/navbar.php"; ?>
 
 <div class="header">
     <h1><?php echo htmlspecialchars($specialist); ?> Doctors</h1>
@@ -40,7 +43,7 @@ $result = pg_query_params($conn, $query, array($specialist));
 
 </div>
 
- <?php include './Includes/footer.php'; ?>
+ <?php include '../../Includes/footer.php'; ?>
  
 </body>
 </html>
