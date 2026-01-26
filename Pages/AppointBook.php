@@ -101,15 +101,15 @@ if (isset($_POST['submit'])) {
    <?php
    if ($success): ?>
       <div class="popup">
-         <h3>✓ Success</h3>
+         <h3> Success</h3>
          <p>Your appointment has been booked successfully.</p>
          <a href="../index.php">Back to Home</a>
       </div>
    <?php elseif (!empty($error)): ?>
       <div class="popup error">
-         <h3>✗ Error</h3>
+         <h3> Error</h3>
          <p><?php echo htmlspecialchars($error); ?></p>
-         <a href="bookAppoint.php">Try Again</a>
+         <a href="./bookAppoint.php">Try Again</a>
       </div>
    <?php endif; ?>
 </body>
