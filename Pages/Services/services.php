@@ -4,12 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Medical Services</title>
+<link rel="stylesheet" href="../../Style/base/navbar.css">
+<link rel="stylesheet" href="../../Style/base/footer.css">
 <link rel="stylesheet" href="../../Style/pages/services.css">
 </head>
 
 <body>
 
-<?php include "./Includes/navbar.php"; ?>
+<?php include "../../Includes/navbar.php"; ?>
 
 
 <div class="header">
@@ -46,6 +48,6 @@
 </div>
 
 
- <?php include './Includes/footer.php'; ?>
+ <?php include '../../Includes/footer.php'; ?>
 </body>
 </html>
