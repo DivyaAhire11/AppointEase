@@ -8,7 +8,9 @@
 </head>
 
 <body>
-<?php include "../../Includes/navbar.php"; ?>
+
+<?php include "./Includes/navbar.php"; ?>
+
 
 <div class="header">
     <h1>Our Medical Services</h1>
@@ -43,6 +45,7 @@
 
 </div>
 
-<?php include "../../Includes/footer.php"; ?>
+
+ <?php include './Includes/footer.php'; ?>
 </body>
 </html>
