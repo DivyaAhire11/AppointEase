@@ -1,42 +1,8 @@
 <?php
-session_start();
-include "db.php";
-
-$message = "";
-
-/* SIGNUP */
-if (isset($_POST['signup'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    $query = "INSERT INTO users (name, email, password) VALUES ($1, $2, $3)";
-    $result = pg_query_params($conn, $query, array($name, $email, $password));
-
-    if ($result) {
-        $message = "Signup successful! Please login.";
-    } else {
-        $message = "Email already exists!";
-    }
-}
-
-/* LOGIN */
-if (isset($_POST['login'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $query = "SELECT * FROM users WHERE email = $1";
-    $result = pg_query_params($conn, $query, array($email));
-    $user = pg_fetch_assoc($result);
-
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user'] = $user['name'];
-        header("Location: dashboard.php");
-        exit;
-    } else {
-        $message = "Invalid login credentials!";
-    }
-}
+// This file is deprecated. Use Pages/Login/login.php instead.
+// Redirect to new login page
+header("Location: ../Pages/Login/login.php");
+exit;
 ?>
 
 <!DOCTYPE html>
