@@ -371,6 +371,10 @@ if (isset($_POST['login'])) {
                 <button type="submit" name="login" class="btn btn-primary">Login</button>
 
                 <div class="toggle-form">
+                    <a href="forgot_password.php" style="font-size: 12px;">Forgot Password?</a>
+                </div>
+
+                <div class="toggle-form">
                     Don't have an account? <a onclick="toggleForm()">Signup here</a>
                 </div>
             </form>
