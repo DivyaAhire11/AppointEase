@@ -1,38 +1,38 @@
-<?php
-session_start();
-include "db.php";
+ <?php
+// session_start();
+// include "db.php";
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: index.php");
-    exit;
-}
+// if (!isset($_SESSION['user_id'])) {
+//     header("Location: index.php");
+//     exit;
+// }
 
-$doctor_id = $_GET['doctor_id'];
-$message = "";
+// $doctor_id = $_GET['doctor_id'];
+// $message = "";
 
-if (isset($_POST['book'])) {
-    $date = $_POST['date'];
-    $time = $_POST['time'];
-    $patient_id = $_SESSION['user_id'];
+// if (isset($_POST['book'])) {
+//     $date = $_POST['date'];
+//     $time = $_POST['time'];
+//     $patient_id = $_SESSION['user_id'];
 
-    $query = "INSERT INTO appointments 
-              (patient_id, doctor_id, appointment_date, appointment_time)
-              VALUES ($1, $2, $3, $4)";
+//     $query = "INSERT INTO appointments 
+//               (patient_id, doctor_id, appointment_date, appointment_time)
+//               VALUES ($1, $2, $3, $4)";
 
-    $result = @pg_query_params(
-        $conn,
-        $query,
-        array($patient_id, $doctor_id, $date, $time)
-    );
+//     $result = @pg_query_params(
+//         $conn,
+//         $query,
+//         array($patient_id, $doctor_id, $date, $time)
+//     );
 
-    if ($result) {
-        $message = "✅ Appointment booked successfully!";
-    } else {
-        $message = "❌ This time slot is already booked. Please choose another.";
-    }
-}
+//     if ($result) {
+//         $message = "✅ Appointment booked successfully!";
+//     } else {
+//         $message = "❌ This time slot is already booked. Please choose another.";
+//     }
+// }
 ?>
-
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,8 +95,8 @@ button {
         <button type="submit" name="book">Confirm Booking</button>
     </form>
 
-    <div class="message"><?php echo $message; ?></div>
+    <div class="message"><?php // echo $message; ?></div>
 </div>
 
 </body>
-</html>
+</html> -->

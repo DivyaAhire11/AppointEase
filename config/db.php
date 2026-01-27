@@ -9,9 +9,7 @@ $password = "tybcs";
 $conn = pg_connect("host=$host port=$port dbname=$database user=$user password=$password");
 
 if (!$conn) {
-   die("Error: Database connection failed - " . pg_last_error());
+   die("Error: Database connection failed - ");
 }
 
-// Set the connection to use UTF-8
-pg_set_client_encoding($conn, "UTF8");
 ?>
