@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+// Destroy all session data
 session_destroy();
-header("Location: index.php");
+
+// Redirect to home page
+header("Location: /AppointEase/index.php?logout=success");
+exit;
 ?>
