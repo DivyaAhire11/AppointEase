@@ -123,33 +123,33 @@
 
     .menu {
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-        max-height: none;
-        overflow: visible;
-        position: static;
-        background: transparent;
-        padding: 10px 0 0 0;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0));
+        padding: 0;
+        transition: max-height 0.28s ease;
         z-index: 999;
     }
 
     .menu.active {
-        max-height: none;
-        padding: 10px 0 0 0;
+        max-height: 400px; /* enough for menu items */
+        padding: 10px 0 12px 0;
     }
 
     .menu li {
-        width: auto;
-        text-align: center;
+        width: 100%;
+        text-align: left;
         border-bottom: none;
     }
 
     .menu li a {
-        display: inline-block;
-        padding: 8px 12px !important;
+        display: block;
+        padding: 12px 18px !important;
         border-radius: 0 !important;
-        font-size: 0.9rem !important;
+        font-size: 0.95rem !important;
     }
 
     .menu li a.nav-btn {
@@ -170,26 +170,29 @@
         display: block;
     }
 }
+/* Mobile toggle button styles */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 10px;
+}
+.nav-toggle:focus { outline: 2px solid rgba(111,255,233,0.3); }
+.nav-toggle .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    margin: 5px 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-toggle.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.active .bar:nth-child(2) { opacity: 0; }
+.nav-toggle.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /*space between and , ( */
-    .lines {
-        display: none !important;
-        /* hide icon */
-    }
-
-    .menu {
-        display: flex !important;
-        /* always show menu */
-        position: static;
-        width: auto;
-        padding: 0;
-        background-color: transparent;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-
-    .menu.active {
-        display: flex;
-        /* show menu */
-    }
+@media screen and (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .menu { display: flex; }
+}
